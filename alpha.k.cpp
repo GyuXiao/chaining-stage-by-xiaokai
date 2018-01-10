@@ -1,6 +1,6 @@
 #include<iostream>
 #include<algorithm>
-#indclude<string>
+#include<string>
 
 using namespace std;
 int main()
@@ -15,15 +15,10 @@ int main()
     }
     sort(s, s+idx);
 
-    for(int j=0; j<(str.length()+1)/2; j++)
+    for(int j=0; j<idx; j++)
     {
-       if(str.length()==1)
-        {
-            cout<<s[j]; break;
-        }
-
-        if(j==(str.length()+1)/2-1) cout<<s[j];
-        if(str.length()>1 && j<((str.length()+1)/2-1))  cout<<s[j]<<"+";
+        cout<<s[j];
+        if(j+1!=idx) cout<<'+';
     }
     cout<<endl;
 
